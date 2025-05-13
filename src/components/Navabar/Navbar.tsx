@@ -5,12 +5,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { Button } from "../ui/button";
 import Link from "next/link";
 
 const Navbar = () => {
   const [smallScreen, setSmallScreen] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(false);
+  const [, setScreenWidth] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [homePath, setHomePath] = useState(false);
@@ -101,20 +100,32 @@ const Navbar = () => {
         />
 
         <div className="md:flex items-center gap-10 hidden">
-            <ul className="flex items-center gap-3">
-              <Link href="/">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">Home</li>
-              </Link>
-              <Link href="/about-us">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">About us</li>
-              </Link>
-              <Link href="/contact-us">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">Contact us</li>
-              </Link>
-            </ul>
-          <button className="bg-tcolor1 text-[15px] hover:text-white font-[500] text-white cursor-pointer rounded-[4px] py-2 w-32">
-            Apply Now
-          </button>
+          <ul className="flex items-center gap-3">
+            <Link href="/">
+              <li className="text-[15px] font-[500] hover:text-tcolor1">
+                Home
+              </li>
+            </Link>
+            <Link href="/about-us">
+              <li className="text-[15px] font-[500] hover:text-tcolor1">
+                About us
+              </li>
+            </Link>
+            <Link href="/contact-us">
+              <li className="text-[15px] font-[500] hover:text-tcolor1">
+                Contact us
+              </li>
+            </Link>
+          </ul>
+          <a
+            href="https://wa.me/237656106267"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-tcolor1 text-[15px] hover:text-white font-[500] text-white cursor-pointer rounded-[4px] py-2 w-32">
+              Apply Now
+            </button>
+          </a>
         </div>
 
         <div className="w-8 h-8 flex items-center gap-3 md:hidden border-2 border-solid border-white/30">
@@ -141,20 +152,32 @@ const Navbar = () => {
             className={` w-fit h-fit  py-20 flex flex-col items-start mx-auto gap-5  `}
           >
             <div className="flex flex-col gap-8 md:hidden ">
-                <ul className="flex flex-col items-center gap-3">
-              <Link href="/">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">Home</li>
-              </Link>
-              <Link href="/about-us">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">About us</li>
-              </Link>
-              <Link href="/contact-us">
-                <li className="text-[15px] font-[500] hover:text-tcolor1">Contact us</li>
-              </Link>
-            </ul>
-          <button className="bg-tcolor1 text-[15px]  font-[500] text-white cursor-pointer rounded-[4px] py-2 w-32">
-            Apply Now
-          </button>
+              <ul className="flex flex-col items-center gap-3">
+                <Link href="/" onClick={closeNavBar}>
+                  <li className="text-[15px] font-[500] hover:text-tcolor1">
+                    Home
+                  </li>
+                </Link>
+                <Link href="/about-us" onClick={closeNavBar}>
+                  <li className="text-[15px] font-[500] hover:text-tcolor1">
+                    About us
+                  </li>
+                </Link>
+                <Link href="/contact-us" onClick={closeNavBar}>
+                  <li className="text-[15px] font-[500] hover:text-tcolor1">
+                    Contact us
+                  </li>
+                </Link>
+              </ul>
+              <a
+                href="https://wa.me/237656106267"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-tcolor1 text-[15px]  font-[500] text-white cursor-pointer rounded-[4px] py-2 w-32">
+                  Apply Now
+                </button>
+              </a>
             </div>
           </div>
         )}
