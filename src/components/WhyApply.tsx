@@ -4,7 +4,7 @@ const WhyApply = () => {
   return (
     <div className="w-full h-fit flex flex-col gap-6 items-start justify-center bg-[#0071bc23] py-16 px-5 sm:px-10 md:px-30">
       <h1
-        className="text-[45px] text-tcolor1 font-extrabold "
+        className="text-[30px] md:text-[45px] text-tcolor1 font-extrabold "
       >
         Why Apply Early?
       </h1>
