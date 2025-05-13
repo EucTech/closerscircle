@@ -10,7 +10,7 @@ const Footer = () => {
   const router = useRouter();
   return (
     <div className=" w-full flex flex-col pt-10 pb-5 gap-5 items-center justify-center relative bg-tcolor1">
-      <div className="w-full h-fit px-10 sm:px-20 gap-y-10 gap-x-20 flex items-center justify-between text-white">
+      <div className="w-full h-fit px-10 sm:px-20 gap-y-10 gap-x-20 flex flex-col sm:flex-row items-start sm:items-center justify-between text-white">
         <div className="bg-[#fff] flex flex-col items-start justify-center gap-3 md:gap-8">
           <Image
             src={Images.logo}

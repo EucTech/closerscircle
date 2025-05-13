@@ -50,12 +50,12 @@ const HeroSection = () => {
         className=" mt-10"
       >
         <a
-          className=" bg-[#ffffffe8] hover:bg-white/80 text-[15px] z-30 font-[600] text-tcolor1 cursor-pointer rounded-[4px] "
+          className=" bg-[#ffffffe8] hover:bg-white/80 text-[15px] z-30 font-[600] text-tcolor1 cursor-pointer rounded-[4px]  py-3"
           href="https://wa.me/237656106267"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className=" w-38 py-2 ">Apply Now</button>
+          <button className=" w-38">Apply Now</button>
         </a>
       </Fade>
     </div>
